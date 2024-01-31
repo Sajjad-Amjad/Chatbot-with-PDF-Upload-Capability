@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #2b2e4a;  /* Dark Blue Gradient Start */
+            background: linear-gradient(to bottom, #2b2e4a, #2e3239);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #e0e0e0;  /* Off-white text color */
+        }
+
+        .upload-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+            max-width: 480px;
+            background: rgba(255, 255, 255, 0.05);  /* Slight white background to uplift the container */
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .upload-button, .process-button {
+            width: 100%;
+            padding: 16px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-weight: 600;
+            font-size: 17px;
+            outline: none;
+            margin: 32px 0;
+            color: #e0e0e0;
+            background: linear-gradient(90deg, #ef8e38, #f76d57); /* Orange to Red Gradient */
+            box-shadow: 0px 4px 14px -3px #f76d57; /* Shadow with a hint of button color */
+        }
+
+        .upload-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0px 4px 17px -3px #f76d57;
+        }
+
+        .process-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0px 4px 17px -3px #f76d57;
+        }
+
+        @media (max-width: 600px) {
+            .upload-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="upload-container">
+        <h2>Upload Your PDFs</h2>
+        <form action="/upload/" method="POST" enctype="multipart/form-data">
+            <label for="file-upload" class="upload-button">
+                Choose Files
+                <input type="file" name="files" id="file-upload" style="display: none;" multiple accept=".pdf">
+            </label>
+            <button type="submit" class="process-button">Chat</button>
+        </form>
+    </div>
+</body>
+
+</html>

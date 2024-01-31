@@ -2,9 +2,8 @@
 
 This chatbot supports multiple PDF file uploads and offers multilingual chat capabilities. Before using it, please follow the instructions below to complete the necessary setup.
 
-## Prerequisites
+![Sample Project Screenshot](/image.png "Sample of Chatbot with PDF Upload")
 
-- Ensure you have the latest version of Python installed on your system.
 
 ## Setup Steps
 
@@ -26,9 +25,9 @@ Depending on your operating system, use one of the following commands to install
   ```
 
 - For macOS:
-```shell
-pip3 install -r requirements.txt
-```
+    ```shell
+    pip3 install -r requirements.txt
+    ```
 
 ### 4. OpenAI API Key Configuration
 Obtain your OpenAI API key. Once you have it, perform the following steps:
